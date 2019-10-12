@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Prefecture, PrefectureGroup, Prefectures } from './shared/prefectures.module';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jpov';
+  prefectureControl = Prefectures.prefectureControl;
+  prefectureGroups = Prefectures.prefectureGroups;  
 }
