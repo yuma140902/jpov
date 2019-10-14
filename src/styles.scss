@@ -2,3 +2,28 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+/* ::::: テーマカラーのカスタマイズ ::::: */
+/*
+  Angular Material でテーマカラーをカスタマイズする方法 - Qiita
+  https://qiita.com/tomy0610/items/4944e01285d37b17b115
+*/
+
+// テーマ操作関数をライブラリからインポート
+@import '~@angular/material/theming';
+
+// Angular Material の共通スタイルをインクルード
+@include mat-core();
+
+// 色定義： オプションは hue カラーパレットで色コード指定, 参照: https://material.io/design/color/ and https://material.io/tools/color/
+$my-app-primary: mat-palette($mat-yellow, 800);
+$my-app-accent: mat-palette($mat-orange, 600);
+$my-app-warn: mat-palette($mat-red, 500, 900, A100);
+
+// テーマとして色定義をまとめる
+$my-app-theme: mat-dark-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+// カスタムテーマを適用
+@include angular-material-theme($my-app-theme);

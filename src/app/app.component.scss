@@ -1,0 +1,37 @@
+html, body {
+  margin: 0;
+}
+
+.main-header {
+  h1, h2 {
+    margin: 0;
+  }
+
+  text-align: center;
+  background-color: #ffdb3b;
+  .title {
+    font-style: italic;
+  }
+}
+
+.main-content {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 3em;
+  background-color: #252629;
+  color: #ffdd47;
+
+  .header {
+    padding-left: 12px;
+    background: transparent;
+    border-left: solid 5px #ffdd47;
+  }
+}
+
+.footer-list {
+  background-color: #ffdb3b;
+  .limitation {
+    font-weight: bold;
+    font-size: 0.75em;
+  }
+}

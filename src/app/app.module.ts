@@ -4,11 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+//import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HttpModule } from "@angular/http";
+import { HttpClientModule } from "@angular/common/http";
+import { JpoService } from './jpo/jpo.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,9 @@ import { HttpModule } from "@angular/http";
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [JpoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
